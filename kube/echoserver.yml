@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: echo-server
-  replicas: 18
+  replicas: 6
   template:
     metadata:
       labels:
