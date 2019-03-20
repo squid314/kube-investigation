@@ -3,7 +3,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: echo-server
+  labels:
+      app: echo-server
 spec:
+  selector:
+    matchLabels:
+      app: echo-server
   replicas: 6
   template:
     metadata:
@@ -31,3 +36,5 @@ spec:
     protocol: TCP
   selector:
     app: echo-server
+
+# vi: ts=2 sts=2 sw=2 et :
